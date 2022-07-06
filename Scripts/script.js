@@ -114,18 +114,17 @@ slideshow_restart.addEventListener('click', ()=>{
  * 
  *  COPY SHARE LINK
  * 
- */
+*/
+const warning_notification = document.querySelector('.notification.warning_copied_clipboard')
+setTimeout(()=>{warning_notification.dataset.show = true},500)
+setTimeout(()=>{delete warning_notification.dataset.show},5000)
+
 const link_buttons = document.querySelectorAll('.share_button')
 const notification = document.querySelector('.notification.copied_clipboard')
-
 link_buttons.forEach(element => {
-    alert(navigator.clipboard)
-    if(navigator.clipboard == undefined){
+    if(navigator.clipboard == undefined)
         element.remove()
-        notification.innerHTML = 'La función de copiado en portapapeles puede no funcionar'
-        notification.dataset.show = true
-        setTimeout(()=>{delete notification.dataset.show},5000)
-    }else {
+    else {
         element.addEventListener('click',() => {
             navigator.clipboard.writeText(element.dataset.link)
             notification.dataset.show = true
