@@ -132,8 +132,10 @@ slideshow_restart.addEventListener('click', ()=>{
  * 
 */
 const warning_notification = document.querySelector('.notification.warning_copied_clipboard')
+warning_notification.style.display = 'block'
 setTimeout(()=>{warning_notification.dataset.show = true},500)
 setTimeout(()=>{delete warning_notification.dataset.show},5000)
+setTimeout(()=>{delete warning_notification.remove()},5500)
 
 const link_buttons = document.querySelectorAll('.share_button')
 const notification = document.querySelector('.notification.copied_clipboard')
@@ -143,8 +145,10 @@ link_buttons.forEach(element => {
     else {
         element.addEventListener('click',() => {
             navigator.clipboard.writeText(element.dataset.link)
-            notification.dataset.show = true
+            notification.style.display = "block"
+            setTimeout(()=>{notification.dataset.show = true},10)
             setTimeout(()=>{delete notification.dataset.show},5000)
+            setTimeout(()=>{notification.style.display = "none"},5500)
         })
     }
 });

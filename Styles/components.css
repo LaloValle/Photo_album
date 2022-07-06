@@ -84,6 +84,7 @@
 
 .notification {
     opacity: 0;
+    display: none;
     z-index: 1500;
     position: fixed;
     cursor: default;
