@@ -36,8 +36,9 @@ body {
 .slide[data-active]{
     opacity: 1;
     z-index: 1001;
-    transform: translateX(0);
+    transform: translateX(0) translateY(0);
 }
+
 
 .carousel-button {
     z-index: 1010;

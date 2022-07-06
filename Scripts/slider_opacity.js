@@ -19,6 +19,8 @@ buttons.forEach(button => {
     // The actual number of image gets updated to show in the slideshow count
     carousel.dataset.actualImage = newIndex+1
     update_download_url(newIndex)
+    /*console.log('slide',slides.children[newIndex < slides.children.length ? newIndex+1 : 0])
+    slides.children[newIndex < slides.children.length ? newIndex+1 : 0].style.transform = 'translateX(50vw)'*/
 
     // The old slide gets removed from active and
     delete activeSlide.dataset.active
