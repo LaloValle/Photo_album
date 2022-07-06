@@ -1,0 +1,74 @@
+.button {
+    font-weight: 500;
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: 'Fira Sans';
+    color: var(--oxford_blue);
+    font-size: min(3vw,1rem);
+    border: 1px solid var(--oxford_blue);
+    transition: background-color 0.3s ease-out;
+}
+
+.button:hover {
+    background-color: var(--oxford_blue);
+    color: var(--ivory);
+}
+
+.button_dark {
+    border: none !important;
+    color: var(--keppel);
+    background-color: var(--onyx) !important;
+}
+.button_dark:hover {
+    background-color: var(--eerie_black)!important;
+}
+
+.button_green {
+    border: none !important;
+    color: var(--ivory) !important;
+    background-color: var(--keppel) !important;
+}
+.button_green:hover {
+    background-color: #35af97 !important;
+}
+
+.button_icon {
+    padding: 12px;
+    border-radius: 50%;
+}
+.button_icon img{
+    align-items: center;
+    object-fit: contain;
+    width: min(3.5vw,1rem);
+    vertical-align:middle;
+}
+
+.button_no_border {
+    border: none;
+}
+.button_no_border:hover {
+    background-color: var(--ivory_shade);
+}
+
+
+.input {
+    border: none;
+    padding: 5px 5px;
+    width: max-content;
+    display: inline-block;
+    text-align: center;
+    border-radius: 0.25rem;
+    color: var(--ivory_shade);
+    transition: outline 300ms;
+    font-size: min(3vw,0.9rem);
+    background-color: var(--onyx);
+}
+.input:focus {
+    outline: 1px solid var(--ivory);
+}
+.input + label {
+    border-radius: 0.25rem;
+    color: var(--ivory_shade);
+    font-size: min(3.25vw,1rem);
+}

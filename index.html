@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="stylesheet" href="Styles/components.css">
+    <link rel="stylesheet" href="Styles/slider_opacity.css">
+    <!-- <link rel="stylesheet" href="Styles/slider_x_movement.css"> -->
+
+    <title>XY Beatriz</title>
+</head>
+<body>
+    <div class="container">
+
+        <!-- INITIAL PAGE -->
+        <section class="page" id="title_page" data-front="true">
+            <header>
+                <h2 id="subtitle">Foto Álbum</h2>
+                <h1 id="title">XV Beatriz</h1>
+                <p id="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ea nobis excepturi.</p>
+                <div>
+                    <button class="button slideshow_play change_page" id="start_button">Reproducir</button>
+                    <a href="" class="button button_green button_icon" id="share_button" title="Compartir"><img src="./Resources/Icons/link_white_small.png" alt="Link"></a>
+                </div>
+                <span class="button button_icon button_no_border change_page" id="button_open_album" title="Pasar la página"><img src="./Resources/Icons/next_gradient_small.png" alt=""></span>
+            </header>
+
+            <div id="title_page_hidder">
+                <div id="page_fold"></div>
+            </div>
+
+            <div id="change_page_fold" class="change_page"></div>
+        </section>
+        
+        <!-- SLIDESHOW -->
+        <section class="page" id="slideshow">
+            <input type="checkbox" id="checkbox_slideshow_options" checked>
+
+
+            <div id="slideshow_options">
+                <div class="execution_controls">
+                    <button class="button button_icon button_dark button_green options_buttons execution_buttons slideshow_pause" title="Pausar"><img src="./Resources/Icons/stop_white_small.png"></button>
+                    <button class="button button_icon button_dark options_buttons execution_buttons slideshow_play" title="Reproducir"><img src="./Resources/Icons/play_white_small.png"></button>
+                    <button class="button button_icon button_dark options_buttons execution_buttons slideshow_restart" title="Reiniciar"><img src="./Resources/Icons/restart_2_white_small.png"></button>
+                </div>
+                <div class="time_delay">
+                    <img id="time_delay_icon" src="./Resources/Icons/timer_white_small.png" title="Retraso entre fotos">
+                    <input type="text" class="input" id="images_delay" pattern="[0-9]*.[0-9]*" value=10>
+                    <label for="images_delay">seg</label>
+                </div>
+                <div class="other_options">
+                    <a href="./Resources/Photos/Beatriz_XV.zip" class="button button_icon button_dark options_buttons" title="Descargar todo" download="Fotografias_Beatriz_XV.zip"><img src="./Resources/Icons/package_white_small.png"></a>
+                    <button class="button button_icon button_dark options_buttons" title="Compartir"><img src="./Resources/Icons/link_white_small.png"></button>
+                    <label for="checkbox_page_fold" class="button button_icon button_green options_buttons change_page" title="Regresar a portada"><img src="./Resources/Icons/return_white_small.png"></label>
+                </div>
+                <button id="slideshow_options_hide"><label for="checkbox_slideshow_options">:::</button>
+            </div>
+
+            <div class="carousel" data-carousel data-actual-image="1" number-images="12">
+                <button class="carousel-button prev" data-carousel-button="prev"><</button>
+                <button class="carousel-button next" data-carousel-button="next">></button>
+                <a href="./Resources/Photos/Bety_1.jpg" class="button button_icon" id="download_image" title="Descargar fotografía" download="Beatriz_XV.jpg"><img src="./Resources/Icons/download_white_small.png" alt=""></a>
+                <ul data-slides>
+                    <li class="slide" number-image="1" data-active="true"><img loading="lazy" src="./Resources/Photos/Bety_1.jpg" alt=""></li>
+                    <li class="slide" number-image="2" data-right><img loading="lazy" src="./Resources/Photos/Bety_2.jpg" alt=""></li>
+                    <li class="slide" number-image="3" data-right><img loading="lazy" src="./Resources/Photos/Bety_3.jpg" alt=""></li>
+                    <li class="slide" number-image="4" data-right><img loading="lazy" src="./Resources/Photos/Bety_4.jpg" alt=""></li>
+                    <li class="slide" number-image="5" data-right><img loading="lazy" src="./Resources/Photos/Bety_5.jpg" alt=""></li>
+                    <li class="slide" number-image="6" data-right><img loading="lazy" src="./Resources/Photos/Bety_6.jpg" alt=""></li>
+                    <li class="slide" number-image="7" data-right><img loading="lazy" src="./Resources/Photos/Bety_7.jpg" alt=""></li>
+                    <li class="slide" number-image="8" data-right><img loading="lazy" src="./Resources/Photos/Bety_8.jpg" alt=""></li>
+                    <li class="slide" number-image="9" data-right><img loading="lazy" src="./Resources/Photos/Bety_9.jpg" alt=""></li>
+                    <li class="slide" number-image="10" data-right><img loading="lazy" src="./Resources/Photos/Bety_10.jpg" alt=""></li>
+                    <li class="slide" number-image="11" data-right><img loading="lazy" src="./Resources/Photos/Bety_11.jpg" alt=""></li>
+                    <li class="slide" number-image="12" data-right><img loading="lazy" src="./Resources/Photos/Bety_12.jpg" alt=""></li>
+                </ul>
+            </div>
+        </section>
+        
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="Scripts/script.js" defer></script>
+    <script src="Scripts/slider_opacity.js" defer></script>
+    <!-- <script src="Scripts/slider_x_movement.js" defer></script> -->
+
+</body>
+</html>
