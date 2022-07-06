@@ -7,17 +7,8 @@
     --keppel: #44BBA4;
     --blue_munsell: #068D9D;
     --prusian_blue: #13315C;
-    --indigo_dye: #134074;
     --oxford_blue: #0B2545;
-    --pewter_blue: #8DA9C4;
-    --wild_orquid: #CB769E;
-    --honey_yellow: #FDB833;
-    --english_violet: #44355B;
     --spanish_violet: #55286F;
-    --wisteria: #BC96E6;
-    --space_cadete: #1B2845;
-    --charcoal: #2F4550;
-    --charleston_green: #282B28;
     --eerie_black: #252627;
     --gunmetal: #333745;
 
@@ -94,7 +85,6 @@ header {
     font-family: 'Fira Sans', 'Lato';
     background-clip: text;-webkit-background-clip: text;
     background-image: linear-gradient(to top, var(--blue_munsell), var(--spanish_violet));
-    /* background-image: url(../Resources/geometric-style-abstract-background_22415-2037.jpg); */
 }
 
 #description {
@@ -124,11 +114,6 @@ header .button {
     display: none;
     position: absolute;
 }
-/* 
-#checkbox_page_fold:checked + #title_page #title_page_hidder,
-#checkbox_page_fold:checked + #title_page #title_page_hidder #page_fold {
-    animation-play-state: running;
-} */
 
 #title_page_hidder {
     position: absolute;
@@ -137,15 +122,7 @@ header .button {
     background-color: var(--onyx);
     box-shadow: -5px -5px 50px var(--onyx);
     transition: width 1s linear, height 1s linear;
-    /* animation: hide_page 1s linear infinite forwards;
-    animation-play-state: paused; */
 }
-
-/* [data-reverse-animation] {
-    animation-play-state: running !important;
-    animation-direction: reverse !important;
-    animation-fill-mode: backwards !important;
-} */
 
 #page_fold {
     top: 0; left: 0;
@@ -153,8 +130,6 @@ header .button {
     border-bottom: 50px solid var(--onyx);
     border-left: 50px solid var(--ivory_shade);
     transition: border-bottom 490ms linear, border-left 490ms linear;
-    /* animation: hide_page_triangle 1s linear infinite forwards;
-    animation-play-state: paused; */
 }
 #change_page_fold {
     cursor: pointer;
@@ -162,28 +137,6 @@ header .button {
     bottom: 0; right: 0;
     width: 50px; height: 50px;
 }
-/* @keyframes hide_page {
-    from {
-        width: 50px; height: 50px;
-    }
-    to {
-        width: 200vw; height: 200vh;
-    }
-}
-@keyframes hide_page_triangle {
-    0% {
-        border-bottom: 50px solid var(--onyx);
-        border-left: 50px solid var(--ivory_shade);
-    }
-    49% {
-        border-left: max(100vw,100vh) solid var(--ivory_shade);
-        border-bottom: max(100vw,100vh) solid var(--onyx);
-    }
-    100% {
-        border-left: max(100vw,100vh) solid var(--ivory_shade);
-        border-bottom: max(100vw,100vh) solid var(--onyx);
-    }
-} */
 
 /* SLIDESHOW */
 #slideshow {
@@ -273,9 +226,6 @@ header .button {
     position: relative;
     overflow: hidden;
     background-color: var(--onyx);
-    /* max-width: var(--carousel-max-width); */
-    /* background-color: var(--indigo_dye); */
-    /* background-image: linear-gradient(to bottom, var(--ivory), var(--keppel)); */
 }
 .carousel::before {
     padding: 5px;

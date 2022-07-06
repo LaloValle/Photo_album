@@ -108,3 +108,19 @@ slideshow_restart.addEventListener('click', ()=>{
         slides[0].dataset.active = true
     }
 })
+
+
+/**
+ * 
+ *  COPY SHARE LINK
+ * 
+ */
+const link_buttons = document.querySelectorAll('.share_button')
+const notification = document.querySelector('.notification.copied_clipboard')
+link_buttons.forEach(element => {
+    element.addEventListener('click',() => {
+        navigator.clipboard.writeText(element.dataset.link)
+        notification.dataset.show = true
+        setTimeout(()=>{delete notification.dataset.show},5000)
+    })
+});
