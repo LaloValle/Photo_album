@@ -19,7 +19,16 @@ function animation_page_change(){
     }
     status_change_page = !status_change_page
 }
+const slideshow_options_hide = document.getElementById('slideshow_options_hide')
+const checkbox_slideshow_options = document.getElementById('checkbox_slideshow_options')
 function change_pages(change_delay){
+    // When it's the first photography moves the second so it start downloading
+    if(carousel.dataset.actualImage == '1'){
+        const second_photo = carousel.querySelector('ul').children[1]
+        second_photo.style.transform = 'translateX(50vw)'
+    }
+
+    // Changes the pages, one to the front the other to the back
     setTimeout( () => {
         const pages = document.getElementsByClassName("page")
         for(let i=0; i<pages.length; i++){
@@ -28,6 +37,13 @@ function change_pages(change_delay){
         }
     },
     change_delay)
+
+    // Hides the option menu in the slideshow
+    checkbox_slideshow_options.checked = true
+    setTimeout(()=>{
+        checkbox_slideshow_options.checked = false
+        slideshow_options_hide.focus()
+    },3500)
 }
 change_page_elements.forEach(element => {
     element.addEventListener('click', ()=>{

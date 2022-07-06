@@ -244,11 +244,6 @@ header .button {
     content: attr(data-actual-image) " de " attr(number-images);
 }
 
-/* Optimization */
-.carousel ul:first-child li {
-    transform: translateY(-100vw);
-}
-
 #download_image {
     opacity: 0.5;
     z-index: 1200;

@@ -93,10 +93,10 @@
     color: var(--ivory);
     border-radius: 0.5rem;
     bottom: 70px; left: 50%;
-    font-size: min(2vw,1rem);
     transition: opacity 500ms;
     transform: translateX(-50%);
     background-color: var(--onyx);
+    font-size: clamp(0.6rem,2vw,1rem);
 }
 .notification[data-show] {
     opacity: 1;
